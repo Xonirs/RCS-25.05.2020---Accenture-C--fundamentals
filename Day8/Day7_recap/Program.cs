@@ -18,6 +18,21 @@ namespace Day7_recap
             {
                 Console.WriteLine(salary[i]);
             }
+            Console.WriteLine("Break and continue loop");
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 4 || i == 5)
+                {
+                    continue;
+                }
+
+                if (i == 7)
+                {
+                    break;
+                }
+
+                Console.WriteLine(i);
+            }
 
             //Console.WriteLine($"{salary[0]}");
             //Console.WriteLine($"{salary[1]}");

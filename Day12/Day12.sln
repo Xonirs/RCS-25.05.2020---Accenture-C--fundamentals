@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day12_method_defaultValue",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day12_method_differentFile", "Day12_method_differentFile\Day12_method_differentFile.csproj", "{09969166-2976-4037-845B-3355B90AC981}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day12_TicTacToe", "Day12_TicTacToe\Day12_TicTacToe.csproj", "{5898E224-A092-4DFA-B791-F5FF5250E833}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{09969166-2976-4037-845B-3355B90AC981}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09969166-2976-4037-845B-3355B90AC981}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09969166-2976-4037-845B-3355B90AC981}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5898E224-A092-4DFA-B791-F5FF5250E833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5898E224-A092-4DFA-B791-F5FF5250E833}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5898E224-A092-4DFA-B791-F5FF5250E833}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5898E224-A092-4DFA-B791-F5FF5250E833}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

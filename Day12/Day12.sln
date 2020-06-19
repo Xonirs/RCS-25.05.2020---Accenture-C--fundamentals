@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day11_recap_methods", "Day11_recap_methods\Day11_recap_methods.csproj", "{A7800BB1-011B-4729-97DF-C4D98CC5C5A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7800BB1-011B-4729-97DF-C4D98CC5C5A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7800BB1-011B-4729-97DF-C4D98CC5C5A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7800BB1-011B-4729-97DF-C4D98CC5C5A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7800BB1-011B-4729-97DF-C4D98CC5C5A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AEB4B823-1F2E-42F9-91A4-6FD13A106D82}
+	EndGlobalSection
+EndGlobal

@@ -22,15 +22,24 @@ namespace Day14_OOP2
                 Band = "Brainstorm",
                 Venue = "Arēna Rīga",
                 Price = 50.00,
-                Seats = 10000,
+                Seats = 5,
                 Name = "Brainstorm back to the future",
-                IsFull = false,
                 ExpectedDuration = 4,
-                Visitors = new List<Visitor>()
+                Date = new DateTime(2020, 9, 2)
             };
-
-
-
+                        
+            concert.PrintConcertInfo();
+            concert.AddVisitor("John Heading", 21, 60.00);
+            string message = concert.AddVisitor("Maria Tablecloth", 16, 60.00);
+            Console.WriteLine(message);
+            Console.WriteLine(concert.AddVisitor("Ann Bush", 21, 40.00));
+            Console.WriteLine(concert.AddVisitor("Tom Juventus", 21, 60.00));
+            Console.WriteLine(concert.AddVisitor("Tom Juventus", 21, 60.00));
+            Console.WriteLine(concert.AddVisitor("Tom Juventus", 21, 60.00));
+            Console.WriteLine(concert.AddVisitor("Tom Juventus", 21, 60.00));
+            Console.WriteLine(concert.AddVisitor("Tom Juventus", 21, 60.00));
+            Console.WriteLine(concert.AddVisitor("Tom Juventus", 21, 60.00));
+            Console.WriteLine();
             concert.PrintConcertInfo();
         }
     }

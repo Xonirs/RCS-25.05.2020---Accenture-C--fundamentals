@@ -11,10 +11,10 @@ namespace Day14_OOP2
         public double Price;
         public int Seats;
         public string Name;
-        public bool IsFull;
         public int ExpectedDuration;
         //date
-        public List<Visitor> Visitors;
+        public DateTime Date;
+        private List<Visitor> Visitors = new List<Visitor>();
 
         public Concert()
         {
@@ -29,13 +29,13 @@ namespace Day14_OOP2
             Console.WriteLine($"Price: {Price}");
             Console.WriteLine($"Seats: {Seats}");
             Console.WriteLine($"Name: {Name}");
-            Console.WriteLine($"IsFull: {IsFull}");
             Console.WriteLine($"ExpectedDuration: {ExpectedDuration}");
-            //Console.WriteLine($"Date: {Date}");
+            Console.WriteLine($"Date: {Date}");
             Console.WriteLine($"Visitor count: {Visitors.Count}");
             Console.WriteLine();
         }
 
+        //AddVisitor - basically selling tickets and letting in visitors
         public string AddVisitor(string fullName, int age, double money)
         {
             //check the age for visitor
@@ -58,12 +58,13 @@ namespace Day14_OOP2
             {
                 FullName = fullName,
                 Age = age,
-                TicketMoney = money
+                TicketMoney = money,
+                SeatNumber = Visitors.Count + 1
             };
 
             Visitors.Add(visitor);
 
-            return "Success";
+            return "Success, visitor was added";
         }
 
         private bool IsVenueFull()

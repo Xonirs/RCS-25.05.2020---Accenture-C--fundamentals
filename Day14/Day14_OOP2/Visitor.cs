@@ -9,5 +9,6 @@ namespace Day14_OOP2
         public string FullName;
         public double TicketMoney;
         public int Age;
+        public int SeatNumber;
     }
 }

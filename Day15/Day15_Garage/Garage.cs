@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Day15_Garage
 {
-    class Garage
+    public class Garage
     {
+        //public string Id;
         public string Name;
         public string Address;
 

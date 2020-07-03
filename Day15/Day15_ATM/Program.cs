@@ -36,22 +36,21 @@ namespace Day15_ATM
 
             do
             {
-                Console.Write("Enter client id:");
+                Console.Write("Enter client id: ");
                 var clientId = Console.ReadLine();
 
-                Console.Write("Enter amount ");
+                Console.Write("Enter amount: ");
                 var amount = int.Parse(Console.ReadLine());
 
                 var result = atm.Withdraw(clientId, amount);
                 Console.WriteLine(result);
 
-                Console.Write("Do you wan to continue (y/n):");
+                Console.Write("Do you want to continue (y/n):");
                 var doContinue = Console.ReadLine();
                 if (doContinue != "y")
                 {
                     break;
                 }
-
             } while (true);
         }
     }

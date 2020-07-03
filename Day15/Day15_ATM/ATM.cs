@@ -14,7 +14,6 @@ namespace Day15_ATM
         {
             //null - is a non-existing value. it's like NOTHING. not zero, not falst - those are values.            
             //null is used only for class objects (there are some extra special cases)
-
             #region OldWay
             //Old way:
             //We want to go through all of the ATM client accounts and check if we can find with the given clientId
@@ -35,7 +34,7 @@ namespace Day15_ATM
             #endregion
 
             //New way:
-
+            //var account = ...;
 
             //Check if the client account was found
             if (account == null)
@@ -43,6 +42,23 @@ namespace Day15_ATM
                 return $"No such account exist with id '{clientId}'.";
             }
 
+            //Check if client has enough money
+            if (account.AccountBalance < amountToWithdraw)
+            {
+                return $"Not enough funds for client id '{clientId}'.";
+            }
+
+            //Check if ATM has enough money
+            if (Balance < amountToWithdraw)
+            {
+                return $"ATM has not got enough money";
+            }
+
+            //Withdraw money
+            account.AccountBalance -= amountToWithdraw;
+            Balance -= amountToWithdraw;
+
+            return $"Take your money {amountToWithdraw}!";
         }
     }
 }

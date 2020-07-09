@@ -11,15 +11,16 @@ namespace Day18_Exceptions
         //  2>or handle them
         static void Main(string[] args)
         {
-            ExceptionTest7();
-            //try
-            //{
-            //    ExceptionTest6();
-            //}
-            //catch (Exception)
-            //{
-            //    Console.WriteLine("Something went wrong in one of the ExceptionTest methods!");
-            //}
+            int age = 8;
+            try
+            {
+                ExceptionTest8_CanBuyAlcohol(age);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Something went wrong in one of the ExceptionTest methods!");
+                Console.WriteLine($"Error message: {ex.Message}");
+            }
         }
 
         public static void ExceptionTest1()
@@ -139,7 +140,6 @@ namespace Day18_Exceptions
 
             Console.WriteLine("Method ended!");
         }
-
         public static void ExceptionTest6()
         {
             int[] numbers = { 1, 2, 3, 10 };
@@ -156,7 +156,6 @@ namespace Day18_Exceptions
                 //Console.WriteLine($"There was an exception: {e.Message}");
             }
         }
-
         public static void ExceptionTest7()
         {
             int[] numbers = { 1, 2, 3, 10 };
@@ -185,6 +184,17 @@ namespace Day18_Exceptions
             {
                 Console.WriteLine("Something wrong unexpected happened!");
                 Console.WriteLine($"Here is the message: {ex.Message}");
+            }
+        }
+        public static void ExceptionTest8_CanBuyAlcohol(int age)
+        {
+            if (age < 18)
+            {
+                throw new Exception("People underage are not allow to buy alcohol!");
+            }
+            else
+            {
+                Console.WriteLine("Everything is ok, you can buy alcohol!");
             }
         }
     }

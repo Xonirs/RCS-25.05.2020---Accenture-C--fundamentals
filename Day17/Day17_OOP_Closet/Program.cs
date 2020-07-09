@@ -9,6 +9,7 @@ namespace Day17_OOP_Closet
         static void Main(string[] args)
         {
             Closet closet = new Closet();
+
             Console.WriteLine(closet.AddClothes("skirt"));
             string clothesAddingMessage = closet.AddClothes("skirt");
             Console.WriteLine(clothesAddingMessage);

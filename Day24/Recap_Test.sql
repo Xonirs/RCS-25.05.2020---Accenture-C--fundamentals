@@ -54,6 +54,59 @@ SELECT *
 FROM Tasks
 ORDER BY CreatedOn 
 
+SELECT TOP 5 Description 
+FROM Tasks
+ORDER BY Priority DESC
+
+------------------------------------
+/*
+SELECT column1, column2, ...
+FROM tableName
+WHERE condition;
+*/
+
+SELECT * FROM Tasks WHERE TaskId = 5
+SELECT * FROM Tasks WHERE Creator = 'Mom'
+SELECT * FROM Tasks WHERE Priority > 7 ORDER BY Priority
+SELECT * FROM Tasks WHERE Priority <= 6 
+
+-- <> is NOT EQUAL operator
+SELECT * FROM Tasks WHERE Creator <> 'Mom'
+
+SELECT * FROM Tasks WHERE Priority BETWEEN 7 AND 9
+
+SELECT * FROM Tasks WHERE Priority NOT BETWEEN 7 AND 9
+
+-- IN is an operator which helps to choose multiple possible values for a column
+SELECT * FROM Tasks WHERE Priority IN (5,7,10)
+SELECT * FROM Tasks WHERE Creator IN ('Mom', 'Me')
+SELECT * FROM Tasks WHERE TaskId NOT IN (1,2,3,6,7,8)
+
+-- LIKE means that we are using a pattern
+-- '%' used anywhere in a string to match a sequence of zero or more characters (works only with LIKE and NOT LIKE)
+-- '_' used anywhere in a string to match a single character (works only with LIKE and NOT LIKE)
+SELECT * FROM Tasks
+SELECT * FROM Tasks WHERE Creator LIKE 'M%' --all tasks when creator starts with letter M
+SELECT * FROM Tasks WHERE Creator LIKE 'M_' --all tasks when creator starts with letter M and continues with a single character
+
+SELECT * FROM Tasks WHERE Description LIKE '%room%' --all tasks when description contains 'room'
+
+SELECT * FROM Tasks WHERE Description LIKE '%work' --all tasks when description end with 'work'
+
+-- '%xxx' = ends with
+-- 'xxx%' = starts with
+-- '%xxx%' = contains
+
+SELECT * FROM Tasks WHERE Description LIKE '%ou_%'
+
+-- DISTINCT used to remove duplicates
+SELECT DISTINCT Creator FROM Tasks --all creators without duplicates
+
+--in the case below, a unique record will consist of both values, not just one
+SELECT DISTINCT Creator, Priority FROM Tasks
+
+
+
 
 
 

@@ -123,3 +123,26 @@ DROP COLUMN TestColumn
 --alter column
 ALTER TABLE ShoppingItems
 ALTER COLUMN Price DECIMAL(6,2)
+
+--constraints
+--constraints are used to specify rules for the data in a table
+
+--primary key - helps us to uniquely identify each record in a table
+--a column which has the constraint of primary key, must be UNIQUE values, therefore we can't use NULL
+--a table can have only ONE primary key (but the primary key can contain multiple columns)
+
+--adding primary key via table creation
+CREATE TABLE ShoppingItems(
+	Id INT NOT NULL PRIMARY KEY,
+	Description VARCHAR(50) NOT NULL,
+	UseBefore DATETIME,
+	AvailableAmount INT
+);
+
+--deleting primary key
+ALTER TABLE ShoppingItems
+DROP CONSTRAINT [PK__Shopping__3214EC076BC8FAB6];
+
+--adding primary key via ALTER statement
+ALTER TABLE ShoppingItems
+ADD PRIMARY KEY (Id);

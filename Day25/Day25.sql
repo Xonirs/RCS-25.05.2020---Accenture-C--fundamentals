@@ -62,3 +62,64 @@ SELECT DISTINCT UseBefore FROM ShoppingItems
 -----------------------------------------------------------
 
 --find a record which is or is not null
+SELECT * FROM ShoppingItems WHERE AvailableAmount IS NULL
+SELECT * FROM ShoppingItems WHERE UseBefore IS NOT NULL
+
+
+--we can also combine conditions
+SELECT * 
+FROM ShoppingItems 
+WHERE Description NOT IN ('Bread', 'Cheese', 'Butter', 'Corn') AND
+	  AvailableAmount BETWEEN 20 AND 50
+
+SELECT * 
+FROM ShoppingItems 
+WHERE Description NOT IN ('Bread', 'Cheese', 'Butter', 'Corn') OR
+	  AvailableAmount BETWEEN 20 AND 50
+
+SELECT * 
+FROM ShoppingItems 
+WHERE (Description NOT IN ('Bread', 'Cheese', 'Butter', 'Corn') OR
+	  AvailableAmount BETWEEN 20 AND 50) AND
+	  UseBefore = CONVERT(DATETIME,'26.07.2020', 104)
+
+
+--update statements
+/*
+UPDATE tableName
+SET column1 = value1, column2 = value2, ...
+WHERE condition
+*/
+
+UPDATE ShoppingItems
+SET AvailableAmount = 63
+WHERE Description LIKE '%bottle%'
+
+UPDATE ShoppingItems
+SET AvailableAmount = 63, UseBefore = CONVERT(DATETIME, '24.07.2020', 104)
+WHERE Description LIKE '%bottle%'
+
+UPDATE ShoppingItems
+SET AvailableAmount = AvailableAmount + 99
+WHERE Description LIKE '%bottle%'
+
+SELECT * FROM ShoppingItems WHERE Description LIKE '%bottle%'
+
+--table ALTER statements
+--alter - is to change something
+
+--add column
+ALTER TABLE ShoppingItems
+ADD Price INT
+
+UPDATE ShoppingItems SET Price = 29
+
+--delete column
+ALTER TABLE ShoppingItems ADD TestColumn INT
+
+ALTER TABLE ShoppingItems
+DROP COLUMN TestColumn
+
+--alter column
+ALTER TABLE ShoppingItems
+ALTER COLUMN Price DECIMAL(6,2)

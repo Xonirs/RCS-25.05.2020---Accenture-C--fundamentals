@@ -35,6 +35,27 @@ INSERT INTO [dbo].[InventoryItems] VALUES (8,'Pencils',0,'pink')
 INSERT INTO [dbo].[InventoryItems] VALUES (9,'Paper',0,'pink')
 INSERT INTO [dbo].[InventoryItems] VALUES (10,'Pens',24,'yellow')
 
+INSERT INTO [dbo].[InventoryItems] VALUES (11,'Ice',0,NULL)
+INSERT INTO [dbo].[InventoryItems] VALUES (12,'Lamps',24,NULL)
+
+SELECT * FROM InventoryItems WHERE Color IN ('black', 'green')
+SELECT * FROM InventoryItems WHERE Id = 7
+
+DELETE FROM InventoryItems --deletes everything
+DELETE FROM InventoryItems WHERE Color IS NULL --deletes by using condition
+
+--updates everything
+UPDATE InventoryItems
+SET Color = 'white'
+
+--updates by using condition
+UPDATE InventoryItems
+SET Color = 'white'
+WHERE Color IS NULL
+
+
+
+
 
 
 

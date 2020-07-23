@@ -53,6 +53,14 @@ UPDATE InventoryItems
 SET Color = 'white'
 WHERE Color IS NULL
 
+UPDATE InventoryItems
+SET Quantity = NULL
+WHERE Color = 'pink'
+
+UPDATE InventoryItems
+SET Color = NULL
+WHERE Color = 'white'
+
 
 
 
